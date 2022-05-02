@@ -1,0 +1,9 @@
+package com.springdemo.dao;
+
+import java.util.*;
+
+public interface CustomerDAO {
+	
+	public List<Customer> getCustomers();
+
+}

@@ -1,0 +1,23 @@
+package com.springdemo;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class TennisCoach implements Coach{
+	private FortuneService fortuneService;
+	
+	@Override
+	public String getDailyWorkout() {
+		return "Pracitce your backhand volley";
+	}
+	
+	TennisCoach(FortuneService fortuneService){
+		this.fortuneService = fortuneService;
+	}
+
+	@Override
+	public String getDailyFortune() {
+		
+	}
+
+}

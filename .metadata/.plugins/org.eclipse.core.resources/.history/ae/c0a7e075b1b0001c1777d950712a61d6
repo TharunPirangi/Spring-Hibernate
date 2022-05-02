@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+	<context:property-placeholder location="classpath:sport./sport.properties"/>
+	
+
+	
+    
+    <!-- Constructor injection-->
+    <bean id="myCoach"
+        class="com.springDemo.BaseballCoach">
+        <constructor-arg ref = "myFortuneService" />
+    </bean>
+    <bean id = "myFortuneService"
+    	  class = "com.springDemo.HappyFortuneServices">
+    </bean>
+    
+    
+    <!-- Setter injection-->
+    <bean id="myCricketCoach"
+    	class = "com.springDemo.CricketCoach">
+		<property name="fortuneService" ref="myFortuneService"></property>
+		
+		<!-- Setter injection for literals-->
+		
+		<property name="emailAddress" value ="goodcoach@gmail.com"></property>
+		<property name="team" value = "Sunrisers Hyderabad"></property>
+		
+    </bean>
+    
+    
+    
+
+</beans>

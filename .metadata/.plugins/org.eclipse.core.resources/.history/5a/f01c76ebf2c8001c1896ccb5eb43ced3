@@ -1,0 +1,8 @@
+package com.springsecurity.demo.config;
+
+@Configuration
+@EnableWebMvc
+@ComponentScan(basepackage="com.springsecurity.demo")
+public class DemoAppConfig {
+
+}

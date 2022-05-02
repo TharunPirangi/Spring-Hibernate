@@ -1,0 +1,21 @@
+package com.springdemo;
+
+public class SwimCoach  implements Coach{
+
+	public SwimCoach(FortuneService happyFortuneService) {
+		System.out.println("working");
+	}
+
+	@Override
+	public String getDailyWorkout() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
